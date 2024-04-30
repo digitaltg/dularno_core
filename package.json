@@ -1,0 +1,45 @@
+{
+  "name": "dularno",
+  "version": "1.0.0",
+  "description": "An adapter to common controller with nodejs",
+  "main": "index.js",
+  "scripts": {
+    "npm:install": "npm ci",
+    "test": "cross-env NODE_ENV=test jest --testTimeout=5000 --detectOpenHandles --forceExit --no-cache",
+    "lint": "eslint -c ./.eslintrc.js --ext js --report-unused-disable-directives  --max-warnings 0",
+    "build:webpack": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "not-yet"
+  },
+  "keywords": [
+    "module",
+    "node",
+    "route",
+    "controller"
+  ],
+  "files": [
+    "LICENSE",
+    "History.md",
+    "Readme.md",
+    "index.js",
+    "lib/"
+  ],
+  "author": "xampy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.1.1",
+    "jest": "^29.7.0",
+    "superagent": "^9.0.2",
+    "supertest": "^7.0.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
