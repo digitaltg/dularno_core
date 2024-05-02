@@ -22,6 +22,12 @@ class TodoController extends AbstractController {
         const data = this.Database.get()
         return res.json(data);
     }
+
+    get__listDoubleQUote(req, res, next, path = "/tasks_double_quote") {
+        this.Database.insert({ id: 1, name: "task_1" });
+        const data = this.Database.get()
+        return res.json(data);
+    }
 }
 //DUlarno services
 const configuration = {

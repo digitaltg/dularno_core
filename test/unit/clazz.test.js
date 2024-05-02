@@ -24,6 +24,16 @@ describe("[Unit Test] Class Methods params", () => {
         ).toBe(true);
     });
 
+    test("Should return default params when defined with double quotes", () => {
+        const d = new D();
+        let params = getParams(d.f3, false);
+        console.log(params);
+        expect(
+            params.path !== undefined &&
+            params.path == "/path"
+        ).toBe(true);
+    });
+
     test("Should return multiple default params", () => {
         const d = new D();
         let params = getParams(d.f2, false);
@@ -38,12 +48,14 @@ describe("[Unit Test] Class Methods params", () => {
 
 class D {
     f(ret, reu, path = '/path', res, req) {
-        console.log("Function");
         this.#t();
     }
 
     f2(ret, reu, path = '/path', path2 = '/path2', res, req) {
-        console.log("Function");
+        this.#t();
+    }
+
+    f3(ret, reu, path = "/path") {
         this.#t();
     }
 

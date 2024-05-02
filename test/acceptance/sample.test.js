@@ -15,6 +15,18 @@ describe("Bootstap Dularno", () => {
             });
     });
 
+    it("Should load the database provider and use double quotes", (done) => {
+        request(app)
+            .get("/tasks_double_quote")
+            .expect('Content-Type', /json/)
+            .expect(200)
+            .then((response) => {
+                expect(Array.isArray(response.body)).toBe(true);
+                expect(response.body.length).not.toBe(0);
+                done();
+            });
+    });
+
     it("Should return 404 Not found", (done) => {
         request(app)
             .get("/task-does-not-exists")
