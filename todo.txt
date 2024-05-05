@@ -1,0 +1,4 @@
+[] Add context init function to controller
+[] Add invoke and release function to controller 
+   invoke  -- before function is called
+   release -- after function is called)
