@@ -1,5 +1,5 @@
 {
-  "name": "dularno",
+  "name": "@dularno/core",
   "version": "1.0.0",
   "description": "An adapter to common controller with nodejs",
   "main": "index.js",
