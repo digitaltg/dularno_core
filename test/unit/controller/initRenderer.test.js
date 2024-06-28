@@ -49,7 +49,7 @@ describe("Controller: initRendererContext", () => {
         const context = (new BController()).initRendererContext();
 
         expect(context.basePath).toBe(defaultBasePath);
-        expect(context.layout).toBe(undefined);
+        expect(context.layout).toBe(false);
     });
 
     test("Should have return only layout", () => {
@@ -65,7 +65,7 @@ describe("Controller: initRendererContext", () => {
 
         const context = (new BController()).initRendererContext();
 
-        expect(context.basePath).toBe(undefined);
+        expect(context.basePath).toBe("/");
         expect(context.layout).toBe(defaultLayout);
     });
 
