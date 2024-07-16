@@ -5,7 +5,8 @@ class InMemoDatabase {
      */
     data = new Map();
 
-    constructor() {
+    constructor(args) {
+        this.count = args.count;
     }
 
     /**
@@ -32,6 +33,13 @@ class InMemoDatabase {
      */
     get() {
         return Array.from(this.data.values());
+    }
+
+    /**
+     * Remove all data from the array
+     */
+    empty() {
+        this.data.clear();
     }
 
 }
