@@ -17,7 +17,12 @@ class TodoController extends AbstractController {
     }
 
     async preDestroy() {
-        this.Database.empty();
+        await new Promise((resolve) => {
+            setTimeout(() => {
+                this.Database.empty();
+                resolve();
+            }, 2000);
+        });
     }
 
     get__list(req, res, next, path = '/tasks') {
