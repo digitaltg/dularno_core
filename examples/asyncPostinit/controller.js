@@ -15,8 +15,12 @@ class TodoController extends AbstractController {
     }
 
     async asyncPostInit() {
-        this.Database.insert({ id: 1, name: "task_1" });
-        this.calledAsyncPostInit = true;
+        await new Promise((resolve) => {
+            setTimeout(() => {
+                this.calledAsyncPostInit = true;
+                resolve();
+            }, 2000);
+        });
     }
 
     get__list(req, res, next, path = '/test') {
