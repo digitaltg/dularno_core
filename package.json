@@ -1,6 +1,6 @@
 {
   "name": "@dularno/core",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "An adapter to common controller with nodejs",
   "main": "index.js",
   "scripts": {
